@@ -1,0 +1,10 @@
+{
+  "description": "Facilitates household compost collection in Desa Baha by coordinating residents, drivers, and waste facilities to track compost delivery and reward points.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
