@@ -9,9 +9,10 @@ vite.config.*.timestamp-*
 *-debug.log*
 logs/
 *.log
-.claude-replay.*
+.claude*
+CLAUDE.md
 .tmp-*
-/.figma/design-context/
+/.figma/
 
 # Platform-managed agentplat state, not project source. In the
 # client-initiated single-repo workspace layout (make's `Path: "."` spec) the

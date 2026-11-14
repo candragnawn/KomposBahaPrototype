@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" aria-label="Truk penjemputan kompos" viewBox="0 0 180 112">
+  <defs>
+    <linearGradient id="truck-main" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#56D2AF" />
+      <stop offset=".58" stop-color="#159E79" />
+      <stop offset="1" stop-color="#08634A" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="91" cy="99" rx="74" ry="7" fill="#0B3D2E" opacity=".12" />
+  <path d="M18 30h91v58H18Z" fill="url(#truck-main)" />
+  <path d="M30 19h67l12 11H18Z" fill="#91E4CC" />
+  <path d="M109 49h38l24 22v17h-62Z" fill="#0B7A5C" />
+  <path d="M120 56h23l16 15h-39Z" fill="#DDF3EC" />
+  <path d="M17 82h154v10H17Z" fill="#07543F" />
+  <circle cx="49" cy="91" r="14" fill="#173F35" />
+  <circle cx="49" cy="91" r="6" fill="#DCEBE5" />
+  <circle cx="143" cy="91" r="14" fill="#173F35" />
+  <circle cx="143" cy="91" r="6" fill="#DCEBE5" />
+  <path d="M55 49c6-9 16-11 24-5-6 1-10 6-10 11 5-2 10-1 14 4-7 11-24 15-34 6-8-7-7-18-2-26 0 6 3 10 8 10Z" fill="#F7FFFC" />
+</svg>
+

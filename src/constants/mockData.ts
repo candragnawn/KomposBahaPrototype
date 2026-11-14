@@ -1,0 +1,203 @@
+import {
+  ComplaintItem,
+  LedgerItem,
+  PickupOrder,
+  RewardItem,
+  UserItem,
+} from "../types"
+
+export const INITIAL_PICKUP_ORDERS: PickupOrder[] = [
+  {
+    code: "KB-0412",
+    residentName: "Ni Luh Ayu Wulandari",
+    banjar: "Baha Kelod",
+    address: "Jl. Baha No. 7, Banjar Baha Kelod",
+    driverName: "Kadek Dwi Arta",
+    estimatedWeight: "12",
+    officialWeight: "11,5",
+    quality: "Baik",
+    status: "Driver ditugaskan",
+    date: "18 Okt 2026",
+    timeSlot: "08.00–10.00",
+    notes: "Kompos disimpan di karung putih dekat pintu samping.",
+    photoResident: true,
+  },
+  {
+    code: "KB-0415",
+    residentName: "Ni Kadek Sari",
+    banjar: "Baha Kaja",
+    address: "Jl. Baha Kaja No. 22",
+    estimatedWeight: "15",
+    status: "Menunggu konfirmasi",
+    date: "18 Okt 2026",
+    timeSlot: "10.00–12.00",
+  },
+  {
+    code: "KB-0409",
+    residentName: "I Wayan Sudarta",
+    banjar: "Baha Kelod",
+    address: "Jl. Baha No. 18, Banjar Baha Kelod",
+    driverName: "Kadek Dwi Arta",
+    estimatedWeight: "8",
+    officialWeight: "8,2",
+    quality: "Baik",
+    status: "Poin diberikan",
+    date: "14 Okt 2026",
+    timeSlot: "08.00–10.00",
+    pointsEarned: 82,
+  },
+  {
+    code: "KB-0405",
+    residentName: "I Made Sukarta",
+    banjar: "Baha Tengah",
+    address: "Gg. Melati No. 3",
+    driverName: "I Ketut Budi",
+    estimatedWeight: "10",
+    status: "Ditolak TPS",
+    date: "9 Okt 2026",
+    timeSlot: "10.00–12.00",
+    rejectionReason: "Tercampur sampah plastik",
+  },
+  {
+    code: "KB-0401",
+    residentName: "Putu Eka Pramana",
+    banjar: "Baha Kelod",
+    address: "Jl. Baha No. 12",
+    driverName: "Kadek Dwi Arta",
+    estimatedWeight: "9",
+    status: "Gagal jemput",
+    date: "2 Okt 2026",
+    timeSlot: "08.00–10.00",
+    failureReason: "Warga tidak di tempat",
+  },
+  {
+    code: "KB-0398",
+    residentName: "I Nyoman Budi",
+    banjar: "Baha Kaja",
+    address: "Jl. Baha Kaja No. 14",
+    estimatedWeight: "11",
+    status: "Dibatalkan",
+    date: "25 Sep 2026",
+    timeSlot: "13.00–15.00",
+  },
+  {
+    code: "KB-0322",
+    residentName: "I Ketut Merta",
+    banjar: "Baha Tengah",
+    address: "Jl. Baha Tengah No. 5",
+    driverName: "I Ketut Budi",
+    estimatedWeight: "14–16",
+    status: "Dalam penjemputan",
+    date: "Hari ini",
+    timeSlot: "09.00",
+  },
+  {
+    code: "KB-0321",
+    residentName: "Putu Eka Pramana",
+    banjar: "Baha Kelod",
+    address: "Jl. Baha No. 12",
+    driverName: "I Gede Arta",
+    estimatedWeight: "9–11",
+    status: "Diterima TPS 3R",
+    date: "Kemarin",
+    timeSlot: "15.20",
+  },
+]
+
+export const INITIAL_REWARDS: RewardItem[] = [
+  {
+    name: "Bibit cabai",
+    price: 200,
+    stock: 12,
+    tone: "green",
+    status: "Aktif",
+  },
+  {
+    name: "Polybag 10 pcs",
+    price: 150,
+    stock: 8,
+    tone: "amber",
+    status: "Aktif",
+  },
+  { name: "Beras 5 kg", price: 600, stock: 5, tone: "cream", status: "Aktif" },
+  {
+    name: "Kopi Baha 250 g",
+    price: 350,
+    stock: 0,
+    tone: "coffee",
+    status: "Nonaktif",
+  },
+]
+
+export const INITIAL_LEDGER: LedgerItem[] = [
+  {
+    date: "14 Okt",
+    description: "Setoran KB-0409",
+    points: "+82",
+    balanceAfter: "1.240",
+  },
+  {
+    date: "10 Okt",
+    description: "Tukar Bibit cabai",
+    points: "−200",
+    balanceAfter: "1.158",
+  },
+  {
+    date: "3 Okt",
+    description: "Setoran KB-0400",
+    points: "+95",
+    balanceAfter: "1.358",
+  },
+]
+
+export const INITIAL_USERS: UserItem[] = [
+  {
+    name: "I Wayan Sudarta",
+    role: "Warga",
+    banjar: "Baha Kelod",
+    phone: "0812 3456 7812",
+    verificationStatus: "Poin diberikan",
+  },
+  {
+    name: "Ni Luh Ayu Wulandari",
+    role: "Warga",
+    banjar: "Baha Kaja",
+    phone: "0813 7788 1209",
+    verificationStatus: "Menunggu konfirmasi",
+  },
+  {
+    name: "Kadek Dwi Arta",
+    role: "Driver",
+    banjar: "Baha Kelod",
+    phone: "0812 8842 1976",
+    verificationStatus: "Poin diberikan",
+  },
+  {
+    name: "Komang Adi Putra",
+    role: "Driver",
+    banjar: "Baha Tengah",
+    phone: "0819 4612 8401",
+    verificationStatus: "Poin diberikan",
+  },
+]
+
+export const INITIAL_COMPLAINTS: ComplaintItem[] = [
+  {
+    id: "PGD-018",
+    residentName: "Ni Luh Ayu Wulandari",
+    topic: "Driver terlambat",
+    date: "18 Okt 2026",
+    status: "Menunggu konfirmasi",
+    description:
+      "Penjemputan dijadwalkan pukul 09.00–11.00, tetapi driver belum tiba sampai pukul 12.30.",
+  },
+  {
+    id: "PGD-017",
+    residentName: "I Made Ariasa",
+    topic: "Poin belum masuk",
+    date: "17 Okt 2026",
+    status: "Diterima TPS 3R",
+    description:
+      "Kompos sudah disetor kemarin sore tetapi saldo mutasi poin belum bertambah.",
+  },
+]

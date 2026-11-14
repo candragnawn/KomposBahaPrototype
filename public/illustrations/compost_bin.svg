@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" aria-label="Tong kompos" viewBox="0 0 160 132">
+  <defs>
+    <linearGradient id="bin-main" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5AD5B2" />
+      <stop offset=".55" stop-color="#19B28D" />
+      <stop offset="1" stop-color="#0B6A4E" />
+    </linearGradient>
+    <linearGradient id="bin-lid" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#B7F0DE" />
+      <stop offset="1" stop-color="#37BF9C" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="82" cy="120" rx="54" ry="7" fill="#0B3D2E" opacity=".12" />
+  <path d="M38 45h87l-8 64c-1 8-7 12-15 12H61c-8 0-14-4-15-12Z" fill="url(#bin-main)" />
+  <path d="M103 45h22l-8 64c-1 8-7 12-15 12H91c8 0 13-5 14-12Z" fill="#075D45" opacity=".5" />
+  <rect x="31" y="36" width="101" height="18" rx="7" fill="url(#bin-lid)" />
+  <rect x="63" y="25" width="39" height="14" rx="5" fill="#0B7A5C" />
+  <path d="M71 70c7-10 17-12 26-5-7 1-12 6-12 13 6-3 12-1 16 3-7 13-26 17-38 8-9-8-8-21-2-30 0 7 3 11 10 11Z" fill="#F7FFFC" />
+  <path d="M64 90c9-10 18-15 31-20" fill="none" stroke="#0B7A5C" stroke-width="3" stroke-linecap="round" />
+  <path d="M27 25c10 0 17 5 20 15-10 1-18-4-20-15Z" fill="#79CC68" />
+  <path d="M119 19c-10 2-15 8-16 18 10-1 16-7 16-18Z" fill="#4EBE75" />
+  <path d="M44 28c7-8 15-9 22-2-6 7-13 8-22 2Z" fill="#F4B856" />
+</svg>
+

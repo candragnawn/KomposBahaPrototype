@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" aria-label="Kotak hadiah" viewBox="0 0 140 120">
+  <defs>
+    <linearGradient id="gift-main" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6ADAB9" />
+      <stop offset=".58" stop-color="#19B28D" />
+      <stop offset="1" stop-color="#0B7658" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="70" cy="105" rx="44" ry="7" fill="#0B3D2E" opacity=".11" />
+  <path d="M27 49h86v55H27Z" fill="url(#gift-main)" />
+  <path d="M80 49h33v55H80Z" fill="#08664C" opacity=".42" />
+  <rect x="20" y="39" width="100" height="19" rx="7" fill="#A7E9D6" />
+  <path d="M63 39h16v65H63Z" fill="#F7FFFC" opacity=".8" />
+  <path d="M70 39c-23-4-27-21-14-24 12-2 16 24 16 24ZM72 39c21-5 25-21 13-24-11-2-15 24-15 24Z" fill="#49C6A2" stroke="#0B7A5C" stroke-width="3" />
+  <path d="M43 76c7-10 17-11 25-5-7 1-11 6-11 12 6-3 11-1 15 3-7 12-24 15-34 7-8-7-7-19-2-27 0 6 3 9 7 10Z" fill="#F7FFFC" />
+</svg>
+
