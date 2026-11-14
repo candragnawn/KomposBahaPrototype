@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../app/constants/app_colors.dart';
@@ -144,11 +144,11 @@ class _WargaRewardsViewState extends ConsumerState<WargaRewardsView> {
                 children: [
                   Text('Syarat penukaran', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                   SizedBox(height: 8),
-                  Text('â€¢ Hadiah diambil di Kantor Desa Baha.', style: TextStyle(fontSize: 13, color: AppColors.muted)),
+                  Text('• Hadiah diambil di Kantor Desa Baha.', style: TextStyle(fontSize: 13, color: AppColors.muted)),
                   SizedBox(height: 4),
-                  Text('â€¢ Tunjukkan kode penukaran dan KTP.', style: TextStyle(fontSize: 13, color: AppColors.muted)),
+                  Text('• Tunjukkan kode penukaran dan KTP.', style: TextStyle(fontSize: 13, color: AppColors.muted)),
                   SizedBox(height: 4),
-                  Text('â€¢ Kode berlaku selama 7 hari.', style: TextStyle(fontSize: 13, color: AppColors.muted)),
+                  Text('• Kode berlaku selama 7 hari.', style: TextStyle(fontSize: 13, color: AppColors.muted)),
                 ],
               ),
             ),

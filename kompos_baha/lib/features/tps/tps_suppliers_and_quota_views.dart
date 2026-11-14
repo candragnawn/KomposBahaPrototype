@@ -28,27 +28,30 @@ class TpsSuppliersView extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: AppColors.border),
           ),
-          child: DataTable(
-            columns: const [
-              DataColumn(label: Text('Warga', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Banjar', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Jumlah Setoran', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Total (kg)', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Rata-rata', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Poin Diberikan', style: TextStyle(fontWeight: FontWeight.bold))),
-            ],
-            rows: rows.map((r) {
-              return DataRow(
-                cells: [
-                  DataCell(Text(r.$1, style: const TextStyle(fontWeight: FontWeight.w600))),
-                  DataCell(Text(r.$2)),
-                  DataCell(Text(r.$3)),
-                  DataCell(Text(r.$4, style: const TextStyle(fontWeight: FontWeight.bold))),
-                  DataCell(Text(r.$5)),
-                  DataCell(Text(r.$6, style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.primaryGreen))),
-                ],
-              );
-            }).toList(),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: DataTable(
+              columns: const [
+                DataColumn(label: Text('Warga', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Banjar', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Jumlah Setoran', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Total (kg)', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Rata-rata', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Poin Diberikan', style: TextStyle(fontWeight: FontWeight.bold))),
+              ],
+              rows: rows.map((r) {
+                return DataRow(
+                  cells: [
+                    DataCell(Text(r.$1, style: const TextStyle(fontWeight: FontWeight.w600))),
+                    DataCell(Text(r.$2)),
+                    DataCell(Text(r.$3)),
+                    DataCell(Text(r.$4, style: const TextStyle(fontWeight: FontWeight.bold))),
+                    DataCell(Text(r.$5)),
+                    DataCell(Text(r.$6, style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.primaryGreen))),
+                  ],
+                );
+              }).toList(),
+            ),
           ),
         ),
       ],
@@ -83,7 +86,7 @@ class TpsQuotaView extends StatelessWidget {
               const SizedBox(height: 20),
               TextFormField(
                 initialValue: '500',
-                decoration: const InputDecoration(labelText: 'Kuota Senin–Jumat (kg)'),
+                decoration: const InputDecoration(labelText: 'Kuota Senin - Jumat (kg)'),
               ),
               const SizedBox(height: 16),
               TextFormField(

@@ -86,53 +86,56 @@ class _AdminComplaintsViewState extends State<AdminComplaintsView> {
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: AppColors.border),
           ),
-          child: DataTable(
-            columns: const [
-              DataColumn(label: Text('Nomor')),
-              DataColumn(label: Text('Pelapor')),
-              DataColumn(label: Text('Topik')),
-              DataColumn(label: Text('Tanggal')),
-              DataColumn(label: Text('Status')),
-              DataColumn(label: Text('Tindakan')),
-            ],
-            rows: [
-              DataRow(cells: [
-                const DataCell(Text('PGD-018', style: TextStyle(fontWeight: FontWeight.bold))),
-                const DataCell(Text('Ni Luh Ayu Wulandari')),
-                const DataCell(Text('Driver terlambat')),
-                const DataCell(Text('18 Okt 2026')),
-                const DataCell(AppBadge(label: 'Menunggu konfirmasi')),
-                DataCell(
-                  AppButton(
-                    label: 'Tanggapi',
-                    onPressed: () => _openComplaintDetail(
-                      'PGD-018',
-                      'Ni Luh Ayu Wulandari',
-                      'Driver terlambat',
-                      'Penjemputan dijadwalkan pukul 09.00–11.00, tetapi driver belum tiba sampai pukul 12.30.',
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: DataTable(
+              columns: const [
+                DataColumn(label: Text('Nomor')),
+                DataColumn(label: Text('Pelapor')),
+                DataColumn(label: Text('Topik')),
+                DataColumn(label: Text('Tanggal')),
+                DataColumn(label: Text('Status')),
+                DataColumn(label: Text('Tindakan')),
+              ],
+              rows: [
+                DataRow(cells: [
+                  const DataCell(Text('PGD-018', style: TextStyle(fontWeight: FontWeight.bold))),
+                  const DataCell(Text('Ni Luh Ayu Wulandari')),
+                  const DataCell(Text('Driver terlambat')),
+                  const DataCell(Text('18 Okt 2026')),
+                  const DataCell(AppBadge(label: 'Menunggu konfirmasi')),
+                  DataCell(
+                    AppButton(
+                      label: 'Tanggapi',
+                      onPressed: () => _openComplaintDetail(
+                        'PGD-018',
+                        'Ni Luh Ayu Wulandari',
+                        'Driver terlambat',
+                        'Penjemputan dijadwalkan pukul 09.00 - 11.00, tetapi driver belum tiba sampai pukul 12.30.',
+                      ),
                     ),
                   ),
-                ),
-              ]),
-              DataRow(cells: [
-                const DataCell(Text('PGD-017', style: TextStyle(fontWeight: FontWeight.bold))),
-                const DataCell(Text('I Made Ariasa')),
-                const DataCell(Text('Poin belum masuk')),
-                const DataCell(Text('17 Okt 2026')),
-                const DataCell(AppBadge(label: 'Diterima TPS 3R')),
-                DataCell(
-                  AppButton(
-                    label: 'Tanggapi',
-                    onPressed: () => _openComplaintDetail(
-                      'PGD-017',
-                      'I Made Ariasa',
-                      'Poin belum masuk',
-                      'Kompos sudah disetor kemarin sore tetapi saldo mutasi poin belum bertambah.',
+                ]),
+                DataRow(cells: [
+                  const DataCell(Text('PGD-017', style: TextStyle(fontWeight: FontWeight.bold))),
+                  const DataCell(Text('I Made Ariasa')),
+                  const DataCell(Text('Poin belum masuk')),
+                  const DataCell(Text('17 Okt 2026')),
+                  const DataCell(AppBadge(label: 'Diterima TPS 3R')),
+                  DataCell(
+                    AppButton(
+                      label: 'Tanggapi',
+                      onPressed: () => _openComplaintDetail(
+                        'PGD-017',
+                        'I Made Ariasa',
+                        'Poin belum masuk',
+                        'Kompos sudah disetor kemarin sore tetapi saldo mutasi poin belum bertambah.',
+                      ),
                     ),
                   ),
-                ),
-              ]),
-            ],
+                ]),
+              ],
+            ),
           ),
         ),
       ],
@@ -221,37 +224,40 @@ class AdminReportsView extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: AppColors.border),
           ),
-          child: DataTable(
-            columns: const [
-              DataColumn(label: Text('Banjar')),
-              DataColumn(label: Text('Total (kg)')),
-              DataColumn(label: Text('Setoran')),
-              DataColumn(label: Text('Warga Aktif')),
-              DataColumn(label: Text('Poin Terbit')),
-            ],
-            rows: const [
-              DataRow(cells: [
-                DataCell(Text('Baha Kelod', style: TextStyle(fontWeight: FontWeight.bold))),
-                DataCell(Text('486 kg')),
-                DataCell(Text('44')),
-                DataCell(Text('68')),
-                DataCell(Text('4.860')),
-              ]),
-              DataRow(cells: [
-                DataCell(Text('Baha Kaja', style: TextStyle(fontWeight: FontWeight.bold))),
-                DataCell(Text('421 kg')),
-                DataCell(Text('41')),
-                DataCell(Text('62')),
-                DataCell(Text('4.210')),
-              ]),
-              DataRow(cells: [
-                DataCell(Text('Baha Tengah', style: TextStyle(fontWeight: FontWeight.bold))),
-                DataCell(Text('377 kg')),
-                DataCell(Text('39')),
-                DataCell(Text('56')),
-                DataCell(Text('3.770')),
-              ]),
-            ],
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: DataTable(
+              columns: [
+                DataColumn(label: Text('Banjar')),
+                DataColumn(label: Text('Total (kg)')),
+                DataColumn(label: Text('Setoran')),
+                DataColumn(label: Text('Warga Aktif')),
+                DataColumn(label: Text('Poin Terbit')),
+              ],
+              rows: [
+                DataRow(cells: [
+                  DataCell(Text('Baha Kelod', style: TextStyle(fontWeight: FontWeight.bold))),
+                  DataCell(Text('486 kg')),
+                  DataCell(Text('44')),
+                  DataCell(Text('68')),
+                  DataCell(Text('4.860')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('Baha Kaja', style: TextStyle(fontWeight: FontWeight.bold))),
+                  DataCell(Text('421 kg')),
+                  DataCell(Text('41')),
+                  DataCell(Text('62')),
+                  DataCell(Text('4.210')),
+                ]),
+                DataRow(cells: [
+                  DataCell(Text('Baha Tengah', style: TextStyle(fontWeight: FontWeight.bold))),
+                  DataCell(Text('377 kg')),
+                  DataCell(Text('39')),
+                  DataCell(Text('56')),
+                  DataCell(Text('3.770')),
+                ]),
+              ],
+            ),
           ),
         ),
       ],

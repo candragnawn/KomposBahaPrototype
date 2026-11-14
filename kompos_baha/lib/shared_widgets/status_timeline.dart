@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../app/constants/app_colors.dart';
 import '../core/models/offer_stage.dart';
@@ -17,11 +17,11 @@ class StatusTimelineWidget extends StatelessWidget {
   ];
 
   static const List<String> _times = [
-    '14 Okt Â· 08.10',
-    '14 Okt Â· 08.35',
-    '14 Okt Â· 10.02',
-    '14 Okt Â· 11.18',
-    '14 Okt Â· 15.42',
+    '14 Okt • 08.10',
+    '14 Okt • 08.35',
+    '14 Okt • 10.02',
+    '14 Okt • 11.18',
+    '14 Okt • 15.42',
   ];
 
   @override

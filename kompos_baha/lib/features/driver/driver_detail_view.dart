@@ -129,7 +129,7 @@ class _DriverDetailViewState extends ConsumerState<DriverDetailView> {
                 SizedBox(height: 6),
                 Text('Rute navigasi penjemputan', style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.ink)),
                 SizedBox(height: 2),
-                Text('1,8 km Â· sekitar 7 menit', style: TextStyle(fontSize: 12, color: AppColors.muted)),
+                Text('1,8 km • sekitar 7 menit', style: TextStyle(fontSize: 12, color: AppColors.muted)),
               ],
             ),
           ),

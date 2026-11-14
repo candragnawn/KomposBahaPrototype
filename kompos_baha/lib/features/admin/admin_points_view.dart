@@ -71,27 +71,30 @@ class _AdminPointsViewState extends State<AdminPointsView> {
                 const SizedBox(height: 20),
                 const Text('Riwayat versi tarif', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                 const SizedBox(height: 8),
-                DataTable(
-                  columns: const [
-                    DataColumn(label: Text('Versi')),
-                    DataColumn(label: Text('Tarif')),
-                    DataColumn(label: Text('Aturan Bonus')),
-                    DataColumn(label: Text('Tanggal Efektif')),
-                  ],
-                  rows: const [
-                    DataRow(cells: [
-                      DataCell(Text('v2.1', style: TextStyle(fontWeight: FontWeight.bold))),
-                      DataCell(Text('10 poin/kg')),
-                      DataCell(Text('+20 poin ≥ 15 kg')),
-                      DataCell(Text('1 Okt 2026')),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(Text('v2.0')),
-                      DataCell(Text('8 poin/kg')),
-                      DataCell(Text('Tidak ada')),
-                      DataCell(Text('1 Jul 2026')),
-                    ]),
-                  ],
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: DataTable(
+                    columns: const [
+                      DataColumn(label: Text('Versi')),
+                      DataColumn(label: Text('Tarif')),
+                      DataColumn(label: Text('Aturan Bonus')),
+                      DataColumn(label: Text('Tanggal Efektif')),
+                    ],
+                    rows: const [
+                      DataRow(cells: [
+                        DataCell(Text('v2.1', style: TextStyle(fontWeight: FontWeight.bold))),
+                        DataCell(Text('10 poin/kg')),
+                        DataCell(Text('+20 poin ≥ 15 kg')),
+                        DataCell(Text('1 Okt 2026')),
+                      ]),
+                      DataRow(cells: [
+                        DataCell(Text('v2.0')),
+                        DataCell(Text('8 poin/kg')),
+                        DataCell(Text('Tidak ada')),
+                        DataCell(Text('1 Jul 2026')),
+                      ]),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -104,44 +107,47 @@ class _AdminPointsViewState extends State<AdminPointsView> {
               borderRadius: BorderRadius.circular(8),
               border: Border.all(color: AppColors.border),
             ),
-            child: DataTable(
-              columns: const [
-                DataColumn(label: Text('Nama Hadiah')),
-                DataColumn(label: Text('Stok')),
-                DataColumn(label: Text('Harga Poin')),
-                DataColumn(label: Text('Status')),
-                DataColumn(label: Text('Tindakan')),
-              ],
-              rows: [
-                DataRow(cells: [
-                  const DataCell(Text('Bibit cabai', style: TextStyle(fontWeight: FontWeight.bold))),
-                  const DataCell(Text('12')),
-                  const DataCell(Text('200 poin')),
-                  const DataCell(Text('Aktif')),
-                  DataCell(AppButton(label: 'Ubah', onPressed: () {})),
-                ]),
-                DataRow(cells: [
-                  const DataCell(Text('Polybag 10 pcs', style: TextStyle(fontWeight: FontWeight.bold))),
-                  const DataCell(Text('8')),
-                  const DataCell(Text('150 poin')),
-                  const DataCell(Text('Aktif')),
-                  DataCell(AppButton(label: 'Ubah', onPressed: () {})),
-                ]),
-                DataRow(cells: [
-                  const DataCell(Text('Beras 5 kg', style: TextStyle(fontWeight: FontWeight.bold))),
-                  const DataCell(Text('5')),
-                  const DataCell(Text('600 poin')),
-                  const DataCell(Text('Aktif')),
-                  DataCell(AppButton(label: 'Ubah', onPressed: () {})),
-                ]),
-                DataRow(cells: [
-                  const DataCell(Text('Kopi Baha 250 g', style: TextStyle(fontWeight: FontWeight.bold))),
-                  const DataCell(Text('0')),
-                  const DataCell(Text('350 poin')),
-                  const DataCell(Text('Nonaktif')),
-                  DataCell(AppButton(label: 'Ubah', onPressed: () {})),
-                ]),
-              ],
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: DataTable(
+                columns: const [
+                  DataColumn(label: Text('Nama Hadiah')),
+                  DataColumn(label: Text('Stok')),
+                  DataColumn(label: Text('Harga Poin')),
+                  DataColumn(label: Text('Status')),
+                  DataColumn(label: Text('Tindakan')),
+                ],
+                rows: [
+                  DataRow(cells: [
+                    const DataCell(Text('Bibit cabai', style: TextStyle(fontWeight: FontWeight.bold))),
+                    const DataCell(Text('12')),
+                    const DataCell(Text('200 poin')),
+                    const DataCell(Text('Aktif')),
+                    DataCell(AppButton(label: 'Ubah', onPressed: () {})),
+                  ]),
+                  DataRow(cells: [
+                    const DataCell(Text('Polybag 10 pcs', style: TextStyle(fontWeight: FontWeight.bold))),
+                    const DataCell(Text('8')),
+                    const DataCell(Text('150 poin')),
+                    const DataCell(Text('Aktif')),
+                    DataCell(AppButton(label: 'Ubah', onPressed: () {})),
+                  ]),
+                  DataRow(cells: [
+                    const DataCell(Text('Beras 5 kg', style: TextStyle(fontWeight: FontWeight.bold))),
+                    const DataCell(Text('5')),
+                    const DataCell(Text('600 poin')),
+                    const DataCell(Text('Aktif')),
+                    DataCell(AppButton(label: 'Ubah', onPressed: () {})),
+                  ]),
+                  DataRow(cells: [
+                    const DataCell(Text('Kopi Baha 250 g', style: TextStyle(fontWeight: FontWeight.bold))),
+                    const DataCell(Text('0')),
+                    const DataCell(Text('350 poin')),
+                    const DataCell(Text('Nonaktif')),
+                    DataCell(AppButton(label: 'Ubah', onPressed: () {})),
+                  ]),
+                ],
+              ),
             ),
           ),
         ] else ...[
@@ -152,49 +158,52 @@ class _AdminPointsViewState extends State<AdminPointsView> {
               borderRadius: BorderRadius.circular(8),
               border: Border.all(color: AppColors.border),
             ),
-            child: DataTable(
-              columns: const [
-                DataColumn(label: Text('Kode Klaim')),
-                DataColumn(label: Text('Warga')),
-                DataColumn(label: Text('Hadiah')),
-                DataColumn(label: Text('Poin')),
-                DataColumn(label: Text('Tanggal')),
-                DataColumn(label: Text('Tindakan')),
-              ],
-              rows: [
-                DataRow(cells: [
-                  const DataCell(Text('KBH-8468', style: TextStyle(fontWeight: FontWeight.bold))),
-                  const DataCell(Text('Ni Made Suriati')),
-                  const DataCell(Text('Sekop kebun')),
-                  const DataCell(Text('600')),
-                  const DataCell(Text('18 Okt 2026')),
-                  DataCell(
-                    Row(
-                      children: [
-                        AppButton(label: 'Setujui', variant: ButtonVariant.primary, onPressed: () {}),
-                        const SizedBox(width: 8),
-                        AppButton(label: 'Tolak', variant: ButtonVariant.danger, onPressed: () {}),
-                      ],
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: DataTable(
+                columns: const [
+                  DataColumn(label: Text('Kode Klaim')),
+                  DataColumn(label: Text('Warga')),
+                  DataColumn(label: Text('Hadiah')),
+                  DataColumn(label: Text('Poin')),
+                  DataColumn(label: Text('Tanggal')),
+                  DataColumn(label: Text('Tindakan')),
+                ],
+                rows: [
+                  DataRow(cells: [
+                    const DataCell(Text('KBH-8468', style: TextStyle(fontWeight: FontWeight.bold))),
+                    const DataCell(Text('Ni Made Suriati')),
+                    const DataCell(Text('Sekop kebun')),
+                    const DataCell(Text('600')),
+                    const DataCell(Text('18 Okt 2026')),
+                    DataCell(
+                      Row(
+                        children: [
+                          AppButton(label: 'Setujui', variant: ButtonVariant.primary, onPressed: () {}),
+                          const SizedBox(width: 8),
+                          AppButton(label: 'Tolak', variant: ButtonVariant.danger, onPressed: () {}),
+                        ],
+                      ),
                     ),
-                  ),
-                ]),
-                DataRow(cells: [
-                  const DataCell(Text('KBH-8461', style: TextStyle(fontWeight: FontWeight.bold))),
-                  const DataCell(Text('I Ketut Merta')),
-                  const DataCell(Text('Beras lokal 2 kg')),
-                  const DataCell(Text('1.000')),
-                  const DataCell(Text('17 Okt 2026')),
-                  DataCell(
-                    Row(
-                      children: [
-                        AppButton(label: 'Setujui', variant: ButtonVariant.primary, onPressed: () {}),
-                        const SizedBox(width: 8),
-                        AppButton(label: 'Tolak', variant: ButtonVariant.danger, onPressed: () {}),
-                      ],
+                  ]),
+                  DataRow(cells: [
+                    const DataCell(Text('KBH-8461', style: TextStyle(fontWeight: FontWeight.bold))),
+                    const DataCell(Text('I Ketut Merta')),
+                    const DataCell(Text('Beras lokal 2 kg')),
+                    const DataCell(Text('1.000')),
+                    const DataCell(Text('17 Okt 2026')),
+                    DataCell(
+                      Row(
+                        children: [
+                          AppButton(label: 'Setujui', variant: ButtonVariant.primary, onPressed: () {}),
+                          const SizedBox(width: 8),
+                          AppButton(label: 'Tolak', variant: ButtonVariant.danger, onPressed: () {}),
+                        ],
+                      ),
                     ),
-                  ),
-                ]),
-              ],
+                  ]),
+                ],
+              ),
             ),
           ),
         ],

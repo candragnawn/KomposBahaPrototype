@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../app/constants/app_colors.dart';
@@ -32,7 +32,7 @@ class WargaProfileView extends ConsumerWidget {
           ),
           const SizedBox(height: 4),
           const Center(
-            child: Text('Warga terverifikasi Â· Desa Baha', style: TextStyle(fontSize: 13, color: AppColors.muted)),
+            child: Text('Warga terverifikasi • Desa Baha', style: TextStyle(fontSize: 13, color: AppColors.muted)),
           ),
           const SizedBox(height: 28),
           Container(

@@ -42,7 +42,7 @@ void main() {
       final code = notifier.addOffer(
         estimatedWeight: '15',
         address: 'Jl. Melati No. 5',
-        timeSlot: '08.00–10.00',
+        timeSlot: '08.00 - 10.00',
         notes: 'Ditaruh di depan gerbang',
       );
 

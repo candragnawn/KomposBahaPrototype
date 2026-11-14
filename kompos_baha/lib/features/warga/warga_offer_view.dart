@@ -29,7 +29,7 @@ class _WargaOfferViewState extends ConsumerState<WargaOfferView> {
   final _notesController = TextEditingController(
     text: 'Kompos disimpan di karung putih dekat pintu samping.',
   );
-  String _timeSlot = '08.00â€“10.00';
+  String _timeSlot = '08.00 - 10.00';
   bool _photoAdded = false;
   String _error = '';
   bool _isLoading = false;
@@ -112,7 +112,7 @@ class _WargaOfferViewState extends ConsumerState<WargaOfferView> {
                   StatusTimelineWidget(stage: state.stage == OfferStage.none ? OfferStage.verified : state.stage),
                   const Divider(height: 24, color: AppColors.border),
                   const Text(
-                    '14 Okt 2026 Â· 15.42 WITA',
+                    '14 Okt 2026 • 15.42 WITA',
                     style: TextStyle(fontSize: 12, color: AppColors.muted),
                   ),
                 ],
@@ -327,8 +327,8 @@ class _WargaOfferViewState extends ConsumerState<WargaOfferView> {
             initialValue: _timeSlot,
             decoration: const InputDecoration(labelText: 'Jam siap'),
             items: const [
-              DropdownMenuItem(value: '08.00â€“10.00', child: Text('08.00â€“10.00')),
-              DropdownMenuItem(value: '10.00â€“12.00', child: Text('10.00â€“12.00')),
+              DropdownMenuItem(value: '08.00 - 10.00', child: Text('08.00 - 10.00')),
+              DropdownMenuItem(value: '10.00 - 12.00', child: Text('10.00 - 12.00')),
             ],
             onChanged: (v) {
               if (v != null) setState(() => _timeSlot = v);

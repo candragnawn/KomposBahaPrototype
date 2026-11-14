@@ -221,7 +221,7 @@ class WargaHomeView extends ConsumerWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'KB-0412 Â· 12 kg',
+                                'KB-0412 • 12 kg',
                                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: AppColors.ink),
                               ),
                               SizedBox(height: 4),
@@ -270,7 +270,7 @@ class WargaHomeView extends ConsumerWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'KB-0409 Â· 8 kg',
+                              'KB-0409 • 8 kg',
                               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14, color: AppColors.ink),
                             ),
                             SizedBox(height: 2),

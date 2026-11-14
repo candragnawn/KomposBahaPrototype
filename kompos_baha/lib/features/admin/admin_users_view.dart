@@ -37,33 +37,36 @@ class AdminUsersView extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: AppColors.border),
           ),
-          child: DataTable(
-            columns: const [
-              DataColumn(label: Text('Nama', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Peran', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Banjar', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Telepon', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Status Verifikasi', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Tindakan', style: TextStyle(fontWeight: FontWeight.bold))),
-            ],
-            rows: users.map((u) {
-              return DataRow(
-                cells: [
-                  DataCell(Text(u.$1, style: const TextStyle(fontWeight: FontWeight.w600))),
-                  DataCell(Text(u.$2)),
-                  DataCell(Text(u.$3)),
-                  DataCell(Text(u.$4)),
-                  DataCell(AppBadge(label: u.$5)),
-                  DataCell(
-                    AppButton(
-                      label: u.$6 ? 'Verifikasi' : 'Detail',
-                      variant: u.$6 ? ButtonVariant.primary : ButtonVariant.secondary,
-                      onPressed: () {},
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: DataTable(
+              columns: const [
+                DataColumn(label: Text('Nama', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Peran', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Banjar', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Telepon', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Status Verifikasi', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Tindakan', style: TextStyle(fontWeight: FontWeight.bold))),
+              ],
+              rows: users.map((u) {
+                return DataRow(
+                  cells: [
+                    DataCell(Text(u.$1, style: const TextStyle(fontWeight: FontWeight.w600))),
+                    DataCell(Text(u.$2)),
+                    DataCell(Text(u.$3)),
+                    DataCell(Text(u.$4)),
+                    DataCell(AppBadge(label: u.$5)),
+                    DataCell(
+                      AppButton(
+                        label: u.$6 ? 'Verifikasi' : 'Detail',
+                        variant: u.$6 ? ButtonVariant.primary : ButtonVariant.secondary,
+                        onPressed: () {},
+                      ),
                     ),
-                  ),
-                ],
-              );
-            }).toList(),
+                  ],
+                );
+              }).toList(),
+            ),
           ),
         ),
       ],

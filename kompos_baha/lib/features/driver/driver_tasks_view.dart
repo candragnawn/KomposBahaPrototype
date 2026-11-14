@@ -91,7 +91,7 @@ class _DriverTasksViewState extends State<DriverTasksView> {
 
           // Banjar Group 1
           const Text(
-            'Banjar Baha Kelod · 08.00–10.00',
+            'Banjar Baha Kelod • 08.00 - 10.00',
             style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.muted),
           ),
           const SizedBox(height: 10),
@@ -99,14 +99,14 @@ class _DriverTasksViewState extends State<DriverTasksView> {
           _buildTaskCard(
             name: 'Ni Luh Ayu Wulandari',
             address: 'Jl. Baha No. 7',
-            weight: '12 kg · 08.00–10.00',
+            weight: '12 kg • 08.00 - 10.00',
             onTap: widget.onOpenDetail,
           ),
           const SizedBox(height: 8),
           _buildTaskCard(
             name: 'I Made Sukarta',
             address: 'Gg. Melati No. 3',
-            weight: '8 kg · 08.00–10.00',
+            weight: '8 kg • 08.00 - 10.00',
             onTap: widget.onOpenDetail,
           ),
 
@@ -114,14 +114,14 @@ class _DriverTasksViewState extends State<DriverTasksView> {
 
           // Banjar Group 2
           const Text(
-            'Banjar Baha Kaja · 10.00–12.00',
+            'Banjar Baha Kaja • 10.00 - 12.00',
             style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.muted),
           ),
           const SizedBox(height: 10),
           _buildTaskCard(
             name: 'Ni Kadek Sari',
             address: 'Jl. Baha Kaja No. 22',
-            weight: '15 kg · 10.00–12.00',
+            weight: '15 kg • 10.00 - 12.00',
             onTap: widget.onOpenDetail,
           ),
         ],

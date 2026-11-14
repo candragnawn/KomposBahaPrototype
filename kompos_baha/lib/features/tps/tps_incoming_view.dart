@@ -222,36 +222,39 @@ class _TpsIncomingViewState extends ConsumerState<TpsIncomingView> {
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: AppColors.border),
           ),
-          child: DataTable(
-            showCheckboxColumn: false,
-            columns: const [
-              DataColumn(label: Text('Kode', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Warga', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Banjar', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Driver', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Estimasi', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Status', style: TextStyle(fontWeight: FontWeight.bold))),
-              DataColumn(label: Text('Aksi', style: TextStyle(fontWeight: FontWeight.bold))),
-            ],
-            rows: state.orders.map((order) {
-              return DataRow(
-                onSelectChanged: (_) => _openVerificationDialog(order.code),
-                cells: [
-                  DataCell(Text(order.code, style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.primaryGreen))),
-                  DataCell(Text(order.residentName)),
-                  DataCell(Text(order.banjar)),
-                  DataCell(Text(order.driverName ?? '-')),
-                  DataCell(Text('${order.estimatedWeight} kg')),
-                  DataCell(AppBadge(label: order.status)),
-                  DataCell(
-                    AppButton(
-                      label: 'Timbang / Verifikasi',
-                      onPressed: () => _openVerificationDialog(order.code),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: DataTable(
+              showCheckboxColumn: false,
+              columns: const [
+                DataColumn(label: Text('Kode', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Warga', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Banjar', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Driver', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Estimasi', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Status', style: TextStyle(fontWeight: FontWeight.bold))),
+                DataColumn(label: Text('Aksi', style: TextStyle(fontWeight: FontWeight.bold))),
+              ],
+              rows: state.orders.map((order) {
+                return DataRow(
+                  onSelectChanged: (_) => _openVerificationDialog(order.code),
+                  cells: [
+                    DataCell(Text(order.code, style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.primaryGreen))),
+                    DataCell(Text(order.residentName)),
+                    DataCell(Text(order.banjar)),
+                    DataCell(Text(order.driverName ?? '-')),
+                    DataCell(Text('${order.estimatedWeight} kg')),
+                    DataCell(AppBadge(label: order.status)),
+                    DataCell(
+                      AppButton(
+                        label: 'Timbang / Verifikasi',
+                        onPressed: () => _openVerificationDialog(order.code),
+                      ),
                     ),
-                  ),
-                ],
-              );
-            }).toList(),
+                  ],
+                );
+              }).toList(),
+            ),
           ),
         ),
       ],

@@ -78,7 +78,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
       quality: 'Baik',
       status: 'Driver ditugaskan',
       date: '18 Okt 2026',
-      timeSlot: '08.00–10.00',
+      timeSlot: '08.00 - 10.00',
       notes: 'Kompos disimpan di karung putih dekat pintu samping.',
       photoResident: true,
     ),
@@ -90,7 +90,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
       estimatedWeight: '15',
       status: 'Menunggu konfirmasi',
       date: '18 Okt 2026',
-      timeSlot: '10.00–12.00',
+      timeSlot: '10.00 - 12.00',
     ),
     PickupOrder(
       code: 'KB-0409',
@@ -103,7 +103,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
       quality: 'Baik',
       status: 'Poin diberikan',
       date: '14 Okt 2026',
-      timeSlot: '08.00–10.00',
+      timeSlot: '08.00 - 10.00',
       pointsEarned: 82,
     ),
     PickupOrder(
@@ -115,7 +115,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
       estimatedWeight: '10',
       status: 'Ditolak TPS',
       date: '9 Okt 2026',
-      timeSlot: '10.00–12.00',
+      timeSlot: '10.00 - 12.00',
       rejectionReason: 'Tercampur sampah plastik',
     ),
     PickupOrder(
@@ -127,7 +127,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
       estimatedWeight: '9',
       status: 'Gagal jemput',
       date: '2 Okt 2026',
-      timeSlot: '08.00–10.00',
+      timeSlot: '08.00 - 10.00',
       failureReason: 'Warga tidak di tempat',
     ),
   ];
@@ -183,7 +183,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
       topic: 'Driver terlambat',
       date: '18 Okt 2026',
       status: 'Menunggu konfirmasi',
-      description: 'Penjemputan dijadwalkan pukul 09.00–11.00, tetapi driver belum tiba sampai pukul 12.30.',
+      description: 'Penjemputan dijadwalkan pukul 09.00 - 11.00, tetapi driver belum tiba sampai pukul 12.30.',
     ),
     ComplaintItem(
       id: 'PGD-017',
