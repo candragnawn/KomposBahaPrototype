@@ -1,0 +1,39 @@
+name: kompos_baha
+description: "Kompos Baha - Layanan setor kompos, poin, dan hadiah untuk warga Desa Baha."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  shared_preferences: ^2.3.2
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10
+  url_launcher: ^6.3.0
+  image_picker: ^1.1.2
+  path_provider: ^2.1.4
+  crypto: ^3.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Taruh semua gambar (penamaan sama seperti CulTask) di folder assets/images/
+  # Jika ada gambar yang belum dimasukkan, aplikasi tetap jalan
+  # (otomatis memakai tampilan cadangan/fallback).
+  assets:
+    - assets/images/
+    - assets/illustrations/
