@@ -129,11 +129,11 @@ class ProfileScreen extends StatelessWidget {
                     KbMenuTile(
                       icon: Icons.info_outline_rounded,
                       title: 'Tentang aplikasi',
-                      subtitle: 'Kompos Baha versi 1.0.0',
+                      subtitle: 'GOBAHA versi 1.0.0',
                       color: AppColors.primaryDark,
                       onTap: () => showAboutDialog(
                         context: context,
-                        applicationName: 'Kompos Baha',
+                        applicationName: 'GOBAHA',
                         applicationVersion: '1.0.0',
                         applicationIcon: const KbImage(AppAssets.logo, width: 56, height: 56, fit: BoxFit.contain),
                         children: const [

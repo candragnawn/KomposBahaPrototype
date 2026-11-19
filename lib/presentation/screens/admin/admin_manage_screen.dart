@@ -73,7 +73,7 @@ class AdminManageScreen extends StatelessWidget {
       slivers: [
         KbSliverHeader(
           title: 'Kelola Layanan',
-          subtitle: 'Semua pengaturan Kompos Baha',
+          subtitle: 'Semua pengaturan GOBAHA',
           userName: u.name,
           notifCount: app.unreadCount(u.id),
           onNotifTap: () => NotificationsScreen.open(context),

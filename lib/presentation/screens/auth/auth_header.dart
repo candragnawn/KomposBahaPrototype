@@ -90,7 +90,7 @@ class AuthHeroHeader extends StatelessWidget {
                   ),
                   const SizedBox(height: 14),
                   Text(
-                    'KOMPOS BAHA',
+                    'GOBAHA',
                     style: AppTypography.displayMedium.copyWith(color: Colors.white, letterSpacing: 1.5, fontWeight: FontWeight.w900),
                   ),
                   Text(

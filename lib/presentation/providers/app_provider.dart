@@ -284,7 +284,7 @@ class AppProvider extends ChangeNotifier {
     _users.add(user);
     _sessionId = id;
     _notify(id, 'Selamat datang, ${user.name}!',
-        'Akun Kompos Baha Anda sudah aktif. Yuk setor kompos pertama Anda dan kumpulkan poin.', 'info');
+        'Akun GOBAHA Anda sudah aktif. Yuk setor kompos pertama Anda dan kumpulkan poin.', 'info');
     _notifyRole(UserRole.admin, 'Warga baru terdaftar', '${user.name} (Banjar $banjar) baru saja mendaftar.', 'info');
     _commit();
     await _db.setSession(id);
